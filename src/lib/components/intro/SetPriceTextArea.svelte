@@ -5,13 +5,13 @@
 	export let showIncreasingButton = false;
 
 	let inputValue = '';
+	let ethereumPrice: number | null = null;
 
 	function handleInputChange(event: { target: { value: string; }; }) {
 		inputValue = event.target.value;
 		inputEthValue.set(event.target.value);
 	}
 
-	let ethereumPrice: number | null = null;
 
 	const getEthereumPrice = async () => {
 		try {
