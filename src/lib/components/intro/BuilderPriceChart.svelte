@@ -7,7 +7,7 @@
 
 	let multiPriceParam = 0;
 	let flatPriceParam = 0;
-	let chart1 = null;
+	let chart1: Chart<"line", number[], number> | null = null;
 
 	export let data: number[];
 	export let type: 1 | 2 | 3 = 1;
@@ -98,7 +98,6 @@
 		const prices = supplies.map((supply) =>
 			getCurvePriceQuadratic(inputEtherValue, flatPriceParam, supply),
 		);
-		console.log(prices);
 		chart1.data.labels = supplies;
 		chart1.data.datasets[0].data = prices;
 		chart1.update();
