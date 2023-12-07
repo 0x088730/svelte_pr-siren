@@ -15,7 +15,7 @@
 		y: number;
 	}[] = [];
 
-	let inputEtherValue;
+	let inputEtherValue: number;
 
 	$: inputEtherValue = $inputEthValue;
 
